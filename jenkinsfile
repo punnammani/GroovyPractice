@@ -1,4 +1,4 @@
-@Library('Shared-library@main') _
+@Library('Shared-Library@master') _
 
 node(){
 	
