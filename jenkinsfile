@@ -1,30 +1,39 @@
-@Library('Shared-Library@master') _
+@Library('Shared-Library@MASTER') _
 
-node(){
+pipeline {
+  agent any 
+	tools {
+		jdk 'JAVA_HOME'
+		git 'Default'
+	}
+	options {
+		buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '50')
+	}
+
+    stages {
 	
-		          stage('Checkout') {
-			
-			                          gitCheckout(branch: "master",url: "https://github.com/punnammani/GroovyPractice.git")
-		          }
-	
+		stage('Checkout') {
+			steps {
+			 gitCheckout(
+				branch: "main",
+				url: "https://github.com/ullas621988/CaseStudy.git"
+				)
+			}
+		}
 		
-		         stage('Analyze&Report') {
-			
-			
-			                          sh 'pwd'
-						  sh 'ls'
-						  
-						  println "$WORKSPACE"
-						 
-			                         
-						 extractValuesFromCSV()
-
-		                            	
-			
-		       	}
-
-	                  emailNotification()
-                    
-                    
-}                    
- 
+		stage('Analyze&Report') {
+			steps {
+			 //Test()
+			extractValuesFromCSV()
+			//CSVrun()
+			}
+		}	
+		
+	}
+	
+	post {
+  always {
+    emailNotification()
+  }
+}
+}
