@@ -2,14 +2,7 @@
 
 pipeline {
   agent any 
-	tools {
-		jdk 'JAVA_HOME'
-		git 'Default'
-	}
-	options {
-		buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '50')
-	}
-
+	
     stages {
 	
 		stage('Checkout') {
