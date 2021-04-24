@@ -17,6 +17,10 @@ pipeline {
 		stage('Analyze&Report') {
 			steps {
 			
+			sh 'pwd'
+			println("$WORKSPACE")
+
+			
 			extractValuesFromCSV()
 			
 			}
@@ -26,7 +30,7 @@ pipeline {
 	
 	post {
   always {
-    emailNotification()
+    //emailNotification()
   }
 }
 }
