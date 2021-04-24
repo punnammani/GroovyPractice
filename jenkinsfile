@@ -10,6 +10,8 @@ node(){
 		
 		         stage('Analyze&Report') {
 			
+			
+			                          sh 'pwd'
 			                         
 						 extractValuesFromCSV()
 
