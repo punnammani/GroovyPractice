@@ -12,6 +12,7 @@ node(){
 			
 			
 			                          sh 'pwd'
+						  sh 'ls'
 			                         
 						 extractValuesFromCSV()
 
