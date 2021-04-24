@@ -13,6 +13,7 @@ node(){
 			
 			                          sh 'pwd'
 						  sh 'ls'
+						  sh '${workspace}'
 			                         
 						 extractValuesFromCSV()
 
