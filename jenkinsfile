@@ -13,6 +13,8 @@ node(){
 			
 			                          sh 'pwd'
 						  sh 'ls'
+						  
+						  println "$WORKSPACE"
 						 
 			                         
 						 extractValuesFromCSV()
