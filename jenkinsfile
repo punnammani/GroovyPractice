@@ -8,17 +8,17 @@ pipeline {
 		stage('Checkout') {
 			steps {
 			 gitCheckout(
-				branch: "main",
-				url: "https://github.com/ullas621988/CaseStudy.git"
+				branch: "master",
+				url: "https://github.com/punnammani/GroovyPractice.git"
 				)
 			}
 		}
 		
 		stage('Analyze&Report') {
 			steps {
-			 //Test()
+			
 			extractValuesFromCSV()
-			//CSVrun()
+			
 			}
 		}	
 		
