@@ -10,12 +10,14 @@ node(){
 		
 		         stage('Analyze&Report') {
 			
-			                         emailNotification()
-		                            	//extractValuesFromCSV()
+			                         
+						 extractValuesFromCSV()
+
+		                            	
 			
 		       	}
 
-	                  mailnotification()
+	                  emailNotification()
                     
                     
 }                    
