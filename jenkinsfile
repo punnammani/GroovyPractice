@@ -17,8 +17,9 @@ pipeline {
 		stage('Analyze&Report') {
 			steps {
 			
-			sh 'pwd'
-			sh 'ls'
+			//sh 'pwd'
+			//sh 'ls'
+			bat 'dir'
 			println("$WORKSPACE")
 
 			
