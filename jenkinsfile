@@ -1,0 +1,22 @@
+@Library('Shared-library@main') _
+
+node(){
+	
+		          stage('Checkout') {
+			
+			                          gitCheckout(branch: "master",url: "https://github.com/punnammani/GroovyPractice.git")
+		          }
+	
+		
+		         stage('Analyze&Report') {
+			
+			 
+		                            	ExtractValuesFromCSV
+			
+		       	}
+
+	                  mailnotification()
+                    
+                    
+}                    
+ 
