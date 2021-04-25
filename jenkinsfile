@@ -23,7 +23,8 @@ pipeline {
 			println("$WORKSPACE")
 
 			
-			extractValuesFromCSV()
+			//extractValuesFromCSV()
+			jenkinscsv()
 			
 			}
 		}	
