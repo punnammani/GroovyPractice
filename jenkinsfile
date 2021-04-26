@@ -1,39 +1,25 @@
 @Library('Shared-Library@master') _
 
-pipeline {
-  agent any 
+node(){
+  
 	
-    stages {
-	
-		stage('Checkout') {
-			steps {
-			 gitCheckout(
-				branch: "master",
-				url: "https://github.com/punnammani/GroovyPractice.git"
-				)
-			}
-		}
-		
-		stage('Analyze&Report') {
-			steps {
-			
-			//sh 'pwd'
-			//sh 'ls'
-			bat 'dir'
-			println("$WORKSPACE")
-
-			
-			extractValuesFromCSV()
-			//jenkinscsv()
-			
-			}
+		stage('Git Checkout') {
+			         
+			                       gitCheckout(branch: "master",url: "https://github.com/punnammani/GroovyPractice.git")
 		}	
-		
-	}
 	
-	post {
-  always {
-    emailNotification()
-  }
-}
+		
+		   stage('Making CSV Report') {
+			
+			
+			
+			                          bat 'dir'
+			
+                                                  extractValuesFromCSV()
+                  }
+			
+		
+	
+                          emailNotification()
+ 
 }
