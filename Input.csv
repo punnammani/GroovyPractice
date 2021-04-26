@@ -19,3 +19,5 @@ AppID,AppName,Environment,ReleaseVersion,Status
 177,Testgroo,UAT,1.0.0,QA Passed
 177,Testgroo,DEV,1.0.0,QA passed
 177,Testgroo,SIT,1.0.0,UT Signed Off
+222,ecom,DEV,3.0.0,UT Passed
+333,ecom,PROD,3.1.0,Business Signed Off
