@@ -5,10 +5,8 @@ AppID,AppName,Environment,ReleaseVersion,Status
 132,CustomerService,DEV,1.0.1,UT Passed
 133,ECSSO,PROD,2.1.1,Business Signed Off
 132,CustomerService,UAT,1.0.0,QA Failed
-132,CustomerService,DEV,1.0.0,DEV Failed
-132,CustomerService,QA,1.0.0,QA Failed
 132,CustomerService,SIT,1.0.0,QA Signed Off
-132,CustomerService,DEV,1.0.0,UT Passed
+132,CustomerService,DEV,1.0.0,DEV Passed
 133,ECSSO,UAT,2.1.1,UT Passed
 155,CDSINFO,PROD,3.0.0,Business Signed Off
 155,CDSINFO,UAT,3.0.0,DQA Signed Off
