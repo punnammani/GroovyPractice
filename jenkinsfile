@@ -3,23 +3,26 @@
 node(){
   
 	
-		stage('Git Checkout') {
-			         
+		stage('Checkout Input') {
+			                        //git checkout
 			                       gitCheckout(branch: "master",url: "https://github.com/punnammani/GroovyPractice.git")
 		}	
 	
 		
-		   stage('Making CSV Report') {
+		   stage('Analyze & Report') {
 			
 			
 			
 			                          bat 'dir'
-			
+			                          //extracting values from CSV file and then making report
                                                   extractValuesFromCSV()
                   }
+		  
+		  
+		  stage('Email Notification') {
 			
 		
-	
-                          emailNotification()
- 
+	                                           //send out an email notification to recipient 
+                                                   emailNotification()
+                  }
 }
